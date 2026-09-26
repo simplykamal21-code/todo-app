@@ -1,0 +1,90 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, sans-serif; background: #f0f2f5; color: #1a1a1a; }
+
+/* Login */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.login-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 400px;
+}
+.login-card h1 { margin-bottom: 0.25rem; font-size: 1.75rem; }
+.subtitle { color: #666; margin-bottom: 1.5rem; font-size: 0.9rem; }
+.backend-selector { margin-bottom: 1.25rem; }
+.backend-selector label { display: block; font-size: 0.85rem; margin-bottom: 0.35rem; color: #555; }
+.backend-selector select {
+  width: 100%; padding: 0.6rem; border: 1px solid #ddd; border-radius: 6px; font-size: 0.95rem;
+}
+.form-group { margin-bottom: 1rem; }
+.form-group label { display: block; font-size: 0.85rem; margin-bottom: 0.35rem; color: #555; }
+.form-group input {
+  width: 100%; padding: 0.7rem; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem;
+}
+.btn-primary {
+  width: 100%; padding: 0.75rem; background: #667eea; color: white; border: none;
+  border-radius: 6px; font-size: 1rem; cursor: pointer; margin-top: 0.5rem;
+}
+.btn-primary:hover { background: #5a6fd6; }
+.btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
+.error-msg { background: #fee; color: #c00; padding: 0.6rem; border-radius: 6px; margin: 0.75rem 0; font-size: 0.9rem; }
+.demo-accounts { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #eee; font-size: 0.85rem; color: #555; }
+.demo-accounts ul { list-style: none; margin-top: 0.4rem; }
+.demo-accounts code { background: #f0f0f0; padding: 0.15rem 0.4rem; border-radius: 3px; }
+
+/* Dashboard layout with left nav */
+.dashboard { display: flex; min-height: 100vh; }
+.sidebar {
+  width: 240px; background: #1e293b; color: white; display: flex; flex-direction: column;
+  padding: 1.5rem 0;
+}
+.sidebar-header { padding: 0 1.25rem 1.5rem; border-bottom: 1px solid #334155; }
+.sidebar-header h2 { font-size: 1.25rem; margin-bottom: 0.4rem; }
+.user-info { font-size: 0.85rem; color: #94a3b8; }
+.sidebar-nav { flex: 1; padding: 1rem 0; }
+.nav-item {
+  display: block; padding: 0.75rem 1.25rem; color: #cbd5e1; text-decoration: none;
+  transition: background 0.15s;
+}
+.nav-item:hover, .nav-item.active { background: #334155; color: white; }
+.sidebar-footer { padding: 1rem 1.25rem; border-top: 1px solid #334155; }
+.api-info { font-size: 0.75rem; color: #64748b; margin-bottom: 0.75rem; word-break: break-all; }
+.btn-logout {
+  width: 100%; padding: 0.5rem; background: #ef4444; color: white; border: none;
+  border-radius: 6px; cursor: pointer; font-size: 0.9rem;
+}
+.btn-logout:hover { background: #dc2626; }
+
+.main-content { flex: 1; padding: 2rem; max-width: 800px; }
+.content-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+.content-header h1 { font-size: 1.5rem; }
+.toast { background: #dcfce7; color: #166534; padding: 0.35rem 0.75rem; border-radius: 20px; font-size: 0.85rem; }
+
+.add-form { display: flex; gap: 0.75rem; margin-bottom: 1.5rem; }
+.add-form input {
+  flex: 1; padding: 0.75rem 1rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;
+}
+.add-form .btn-primary { width: auto; padding: 0.75rem 1.5rem; }
+
+.todo-list { list-style: none; }
+.todo-item {
+  display: flex; align-items: center; gap: 0.75rem; background: white;
+  padding: 0.9rem 1rem; border-radius: 8px; margin-bottom: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+.todo-item.completed .todo-title { text-decoration: line-through; color: #94a3b8; }
+.todo-title { flex: 1; cursor: pointer; }
+.edit-input { flex: 1; padding: 0.4rem; border: 1px solid #667eea; border-radius: 4px; font-size: 1rem; }
+.todo-actions button {
+  background: none; border: none; cursor: pointer; font-size: 1rem; opacity: 0.6;
+}
+.todo-actions button:hover { opacity: 1; }
+.empty { color: #64748b; text-align: center; padding: 2rem; }
