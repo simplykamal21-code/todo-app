@@ -35,3 +35,13 @@ node_modules/
 dist/
 build/
 .env
+
+# Java / IDE
+.idea/
+*.iml
+*.class
+target/
+out/
+.classpath
+.project
+.settings/
